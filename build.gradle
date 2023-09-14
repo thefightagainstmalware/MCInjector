@@ -69,43 +69,38 @@ publishing {
 	    if (CHANGELOG.exists()) {
                 artifact source: CHANGELOG, classifier: 'changelog'
 	    }
-                description = 'Utility for cleaning up Minecraft jar files for decompolation'
-                scm {
-                    url = 'https://github.com/ModCoderPack/MCInjector'
-                    connection = 'scm:git:git://github.com/ModCoderPack/MCInjector.git'
-                    developerConnection = 'scm:git:git@github.com:ModCoderPack/MCInjector.git'
-                }
-                issueManagement {
-                    system = 'github'
-                    url = 'https://github.com/ModCoderPack/MCInjector/issues'
-                }
+	description = 'Utility for cleaning up Minecraft jar files for decompolation'
+	issueManagement {
+	    system = 'github'
+	    url = 'https://github.com/ModCoderPack/MCInjector/issues'
+	}
 
-                developers {
-                    developer {
-                        id = 'Fesh0r'
-                        name = 'Fesh0r'
-                    }
-                    developer {
-                        id = 'Searge'
-                        name = 'Searge'
-                    }
-                    developer {
-                        id = 'cpw'
-                        name = 'cpw'
-                    }
-                    developer {
-                        id = 'LexManos'
-                        name = 'Lex Manos'
-                    }
-                }
+	developers {
+	    developer {
+		id = 'Fesh0r'
+		name = 'Fesh0r'
+	    }
+	    developer {
+		id = 'Searge'
+		name = 'Searge'
+	    }
+	    developer {
+		id = 'cpw'
+		name = 'cpw'
+	    }
+	    developer {
+		id = 'LexManos'
+		name = 'Lex Manos'
+	    }
+	}
 
-                licenses { //TODO: Ask the guys if I can license LGPL2.1 like everything else.
-                    license {
-                        name = ''
-                        url = ''	
-                        distribution = 'repo'
-                    }
-                }
+	licenses { //TODO: Ask the guys if I can license LGPL2.1 like everything else.
+	    license {
+		name = ''
+		url = ''	
+		distribution = 'repo'
+	    }
+	}
 
         }
     }
