@@ -1,0 +1,11 @@
+name: Build using Jitpack
+on:
+  push:
+
+jobs:
+  generate-build-number-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      name: Force Jitpack to build
+      run: curl -m 1000000 https://jitpack.io/io/github/thefightagainstmalware/MCInjector/main-SNAPSHOT/build.log
