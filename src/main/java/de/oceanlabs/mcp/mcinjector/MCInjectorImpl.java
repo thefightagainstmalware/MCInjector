@@ -28,6 +28,7 @@ import java.util.logging.Logger;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 import java.util.zip.ZipOutputStream;
+import java.nio.file.attribute.FileTime;
 
 import org.objectweb.asm.ClassReader;
 import org.objectweb.asm.ClassVisitor;
@@ -483,6 +484,9 @@ public class MCInjectorImpl
 
                 if (entry.isDirectory())
                 {
+                    entry.setCreationTime(FileTime.fromMillis(0L));
+                    entry.setLastAccessTime(FileTime.fromMillis(0L));
+                    entry.setLastModifiedTime(FileTime.fromMillis(0L));
                     outJar.putNextEntry(entry);
                     continue;
                 }
@@ -518,6 +522,9 @@ public class MCInjectorImpl
                 }
 
                 ZipEntry newEntry = new ZipEntry(entryName);
+                newEntry.setCreationTime(FileTime.fromMillis(0L));
+                newEntry.setLastAccessTime(FileTime.fromMillis(0L));
+                newEntry.setLastModifiedTime(FileTime.fromMillis(0L));
                 outJar.putNextEntry(newEntry);
                 outJar.write(entryData);
             }
