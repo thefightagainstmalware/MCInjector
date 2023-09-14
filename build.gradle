@@ -22,12 +22,7 @@ repositories {
 }
 
 def gitVersion() {
-    def desc = grgit.describe(longDescr: true).split('-') as List
-    def hash = desc.remove(desc.size() - 1)
-    def offset = desc.remove(desc.size() - 1)
-    def tag = desc.join('-')
-    def branch = grgit.branch.current().name
-    return "${tag}.${offset}${t -> if (branch != 'main') t << '-' + branch}"
+    return "3.4.1-SNAPSHOT";
 }
 
 jar {
