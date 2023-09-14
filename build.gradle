@@ -66,11 +66,10 @@ publishing {
             from components.java
             artifact shadowJar
             artifact tasks.sourceJar
-	    if (CHANGELOG.exists())
+	    if (CHANGELOG.exists()) {
                 artifact source: CHANGELOG, classifier: 'changelog'
-            
+	    }
                 description = 'Utility for cleaning up Minecraft jar files for decompolation'
-                url = 'https://github.com/ModCoderPack/MCInjector'
                 scm {
                     url = 'https://github.com/ModCoderPack/MCInjector'
                     connection = 'scm:git:git://github.com/ModCoderPack/MCInjector.git'
