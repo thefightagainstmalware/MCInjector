@@ -8,4 +8,4 @@ jobs:
     
     steps:
       - name: Force Jitpack to build
-        run: curl -L -m 1000000 https://jitpack.io/io/github/thefightagainstmalware/MCInjector/main-SNAPSHOT/build.log
+        run: curl -L -m 1000000 https://jitpack.io/io/github/thefightagainstmalware/MCInjector/${{ github.sha }}/build.log
