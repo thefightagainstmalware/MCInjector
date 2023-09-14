@@ -66,11 +66,6 @@ publishing {
             from components.java
             artifact shadowJar
             artifact tasks.sourceJar
-
-            groupId = 'org.company'
-            artifactId = 'sample'
-            version = "0.9-SNAPSHOT"
-            from components.java
 	    if (CHANGELOG.exists())
                 artifact source: CHANGELOG, classifier: 'changelog'
             
