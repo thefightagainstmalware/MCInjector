@@ -69,7 +69,6 @@ publishing {
 	    if (CHANGELOG.exists())
                 artifact source: CHANGELOG, classifier: 'changelog'
             
-	    name = 'MCInjector'
                 description = 'Utility for cleaning up Minecraft jar files for decompolation'
                 url = 'https://github.com/ModCoderPack/MCInjector'
                 scm {
